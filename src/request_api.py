@@ -46,8 +46,8 @@ def main():
             addTime = item["addTime"]
             df.loc[len(df)] = [id, title, sourceUrl, addTime]
         if count_save == 100:
-            count_save = 0
             df.to_csv(f"./output_{count_save}.csv")
+            count_save = 0
         count_save += 1
 
     df.to_csv("./output.csv")
