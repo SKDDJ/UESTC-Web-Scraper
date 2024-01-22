@@ -28,7 +28,6 @@ def main():
     total = 10460
     pageSize = 10
     sleep_time = random.random()
-    time.sleep(sleep_time)
     if total // pageSize == total / pageSize:
         pages = total // pageSize
     else:
@@ -37,6 +36,7 @@ def main():
     df = pd.DataFrame(columns=["id", "title", "sourceUrl", "addTime"])
     count_save = 0
     for index in tqdm(range(1, pages + 1)):
+        time.sleep(sleep_time)
         data = fetch_data(index, pageSize)
         json_data = data["data"]
         for item in json_data:
