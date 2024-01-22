@@ -1,8 +1,9 @@
 import random
+import time
 
 import requests
 import pandas as pd
-import time
+from tqdm import tqdm
 
 
 def fetch_data(page_index, page_size):
@@ -35,7 +36,7 @@ def main():
 
     df = pd.DataFrame(columns=["id", "title", "sourceUrl", "addTime"])
     count_save = 0
-    for index in range(1, pages + 1):
+    for index in tqdm(range(1, pages + 1)):
         data = fetch_data(index, pageSize)
         json_data = data["data"]
         for item in json_data:
