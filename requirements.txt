@@ -1,2 +1,4 @@
 selenium==4.1.0
 requests
+pandas
+tqdm
