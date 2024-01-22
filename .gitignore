@@ -1,2 +1,6 @@
+# some files are not tracked by git
 src/scraper.py
 src/test_scraper.py
+
+# logs
+logs/*
