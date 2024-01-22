@@ -61,7 +61,19 @@ def main():
     df = pd.DataFrame(columns=["id", "title", "sourceUrl", "addTime"])
     all_data = []  # 添加一个列表来保存所有数据
     count_save = 0
-    for index in tqdm(range(1, pages + 1)):
+
+    # 从文件中读取上次保存的 index
+    try:
+        with open('last_index.txt', 'r') as f:
+            start_index = int(f.read())
+    except FileNotFoundError:
+        start_index = 1
+
+    for index in tqdm(range(start_index, pages + 1)):
+        # 在每次请求API之前保存当前的 index
+        with open('last_index.txt', 'w') as f:
+            f.write(str(index))
+
         data = fetch_data(index, pageSize)
         if data:
             json_data = data["data"]
@@ -78,7 +90,7 @@ def main():
                 df.to_csv(f"./outputs/{count_save}.csv")
                 with open(f'all_data_{index}.json', 'w', encoding='utf-8') as f:  # 将数据保存为 JSON
                     json.dump(all_data, f)
-                logging.info(f"Page {index} saved to all_data_{index}.json")  # 使用日志记录进度
+                logging.info(f"Page {index-1} saved to all_data_{index-1}.json")  # 使用日志记录进度
             count_save += 1
 
     df.to_csv("./outputs/final_output.csv")
