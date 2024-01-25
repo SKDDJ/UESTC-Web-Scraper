@@ -7,3 +7,10 @@ src/request_api.py
 logs/*
 
 src/outputs/*
+
+# MACOSX
+.DS_Store
+
+# JSON & TXT
+*.JSON
+src/last_index.txt
