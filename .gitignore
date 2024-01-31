@@ -6,7 +6,7 @@ src/request_api.py
 # logs
 logs/*
 
-src/outputs/*
+# src/outputs/*
 
 # MACOSX
 .DS_Store

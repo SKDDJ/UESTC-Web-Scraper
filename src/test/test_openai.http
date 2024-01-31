@@ -1,0 +1,9 @@
+
+
+curl https://api.openai-proxy.org/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-JaRwWMSpa2er1CxmbklRQC0AmSnSJf7a4i02z7HwFnm6g5Zu" \
+  -d '{
+    "model": "gpt-3.5-turbo",
+    "messages": [{"role": "user", "content": "do you like play game?"}]
+  }'

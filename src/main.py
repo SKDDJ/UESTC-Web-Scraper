@@ -87,7 +87,7 @@ def main():
                 df.loc[len(df)] = [id, title, sourceUrl, addTime]
             if count_save == 100:
                 count_save = 0
-                df.to_csv(f"./outputs/{count_save}.csv")
+                # df.to_csv(f"./outputs/{count_save}.csv")
                 with open(f'all_data_{index}.json', 'w', encoding='utf-8') as f:  # 将数据保存为 JSON
                     json.dump(all_data, f)
                 logging.info(f"Page {index-1} saved to all_data_{index-1}.json")  # 使用日志记录进度
@@ -101,3 +101,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

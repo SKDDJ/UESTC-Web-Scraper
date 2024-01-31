@@ -1,0 +1,24 @@
+   Unnamed: 0  ...              addTime
+0         161  ...  2023-12-31T07:00:10
+1         165  ...  2023-12-30T07:00:10
+2         174  ...  2023-12-29T07:00:10
+3         184  ...  2023-12-28T07:00:10
+4         192  ...  2023-12-27T07:00:10
+
+[5 rows x 5 columns]
+shape about rows and columns: (360, 5)
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 360 entries, 0 to 359
+Data columns (total 5 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Unnamed: 0  360 non-null    int64 
+ 1   id          360 non-null    object
+ 2   title       360 non-null    object
+ 3   sourceUrl   360 non-null    object
+ 4   addTime     360 non-null    object
+dtypes: int64(1), object(4)
+memory usage: 14.2+ KB
+None
+
+
