@@ -117,6 +117,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-- Author: Your Name
-- Email: your@email.com
-- GitHub: [Your GitHub Profile](https://github.com/your-username)
+- Author: Yiming Shi
+- Email: yimingshi666@gmail.com
+- GitHub: [My GitHub Profile](https://github.com/SKDDJ)
+- Website: [My Website](https://academic.shiym.top)
